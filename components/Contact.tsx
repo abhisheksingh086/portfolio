@@ -17,8 +17,22 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+
+    const recipients = 'rahulbirdi75@gmail.com,sabhishek086@gmail.com';
+    const subject = `Project Inquiry from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not specified'}
+Project Type: ${formData.projectType || 'Not specified'}
+Budget Range: ${formData.budget || 'Not specified'}
+
+Message:
+${formData.message}
+    `.trim();
+
+    const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
   };
 
   return (
