@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const footerLinks = {
   navigation: ['Home', 'About', 'Services', 'Portfolio', 'Team', 'Contact'],
@@ -138,28 +138,6 @@ export const Footer: React.FC = () => {
             </ul>
           </motion.div>
         </div>
-
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="grid md:grid-cols-3 gap-6 mb-12 pt-8 border-t border-white/10"
-        >
-          <div className="flex items-center gap-3">
-            <Mail className="w-5 h-5 text-primary-blue" />
-            <span className="text-gray-400">hello@agency.com</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-primary-blue" />
-            <span className="text-gray-400">+1 (555) 123-4567</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MapPin className="w-5 h-5 text-primary-blue" />
-            <span className="text-gray-400">San Francisco, CA</span>
-          </div>
-        </motion.div>
 
         {/* Copyright */}
         <motion.div
