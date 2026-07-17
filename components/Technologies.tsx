@@ -4,25 +4,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const technologies = [
-  { name: 'HTML', color: 'from-orange-500 to-orange-600', icon: 'H', borderColor: 'border-orange-500/30' },
-  { name: 'CSS', color: 'from-blue-500 to-blue-600', icon: 'C', borderColor: 'border-blue-500/30' },
-  { name: 'JavaScript', color: 'from-yellow-400 to-yellow-500', icon: 'JS', borderColor: 'border-yellow-500/30' },
-  { name: 'React', color: 'from-cyan-400 to-cyan-500', icon: 'R', borderColor: 'border-cyan-500/30' },
-  { name: 'Tailwind CSS', color: 'from-teal-400 to-teal-500', icon: 'T', borderColor: 'border-teal-500/30' },
-  { name: 'PHP', color: 'from-indigo-500 to-indigo-600', icon: 'P', borderColor: 'border-indigo-500/30' },
-  { name: 'Laravel', color: 'from-red-500 to-red-600', icon: 'L', borderColor: 'border-red-500/30' },
-  { name: 'Node.js', color: 'from-green-500 to-green-600', icon: 'N', borderColor: 'border-green-500/30' },
-  { name: 'Express.js', color: 'from-gray-500 to-gray-600', icon: 'E', borderColor: 'border-gray-500/30' },
-  { name: 'MySQL', color: 'from-blue-600 to-blue-700', icon: 'M', borderColor: 'border-blue-600/30' },
-  { name: 'MongoDB', color: 'from-green-600 to-green-700', icon: 'M', borderColor: 'border-green-600/30' },
-  { name: 'Python', color: 'from-yellow-500 to-yellow-600', icon: 'Py', borderColor: 'border-yellow-600/30' },
-  { name: 'FastAPI', color: 'from-teal-500 to-teal-600', icon: 'F', borderColor: 'border-teal-600/30' },
-  { name: 'Flutter', color: 'from-blue-400 to-blue-500', icon: 'Fl', borderColor: 'border-blue-400/30' },
-  { name: 'Firebase', color: 'from-orange-400 to-orange-500', icon: 'Fi', borderColor: 'border-orange-400/30' },
-  { name: 'Git', color: 'from-red-600 to-red-700', icon: 'G', borderColor: 'border-red-600/30' },
-  { name: 'GitHub', color: 'from-gray-600 to-gray-700', icon: 'GH', borderColor: 'border-gray-600/30' },
-  { name: 'Docker', color: 'from-blue-500 to-blue-600', icon: 'D', borderColor: 'border-blue-500/30' },
-  { name: 'Postman', color: 'from-orange-500 to-orange-600', icon: 'P', borderColor: 'border-orange-500/30' },
+  { name: 'HTML', color: 'from-orange-500 to-orange-600', icon: 'H', borderColor: 'group-hover:border-orange-500/30' },
+  { name: 'CSS', color: 'from-blue-500 to-blue-600', icon: 'C', borderColor: 'group-hover:border-blue-500/30' },
+  { name: 'JavaScript', color: 'from-yellow-400 to-yellow-500', icon: 'JS', borderColor: 'group-hover:border-yellow-500/30' },
+  { name: 'React', color: 'from-cyan-400 to-cyan-500', icon: 'R', borderColor: 'group-hover:border-cyan-500/30' },
+  { name: 'Tailwind CSS', color: 'from-teal-400 to-teal-500', icon: 'T', borderColor: 'group-hover:border-teal-500/30' },
+  { name: 'PHP', color: 'from-indigo-500 to-indigo-600', icon: 'P', borderColor: 'group-hover:border-indigo-500/30' },
+  { name: 'Laravel', color: 'from-red-500 to-red-600', icon: 'L', borderColor: 'group-hover:border-red-500/30' },
+  { name: 'Node.js', color: 'from-green-500 to-green-600', icon: 'N', borderColor: 'group-hover:border-green-500/30' },
+  { name: 'Express.js', color: 'from-gray-500 to-gray-600', icon: 'E', borderColor: 'group-hover:border-gray-500/30' },
+  { name: 'MySQL', color: 'from-blue-600 to-blue-700', icon: 'M', borderColor: 'group-hover:border-blue-600/30' },
+  { name: 'MongoDB', color: 'from-green-600 to-green-700', icon: 'M', borderColor: 'group-hover:border-green-600/30' },
+  { name: 'Python', color: 'from-yellow-500 to-yellow-600', icon: 'Py', borderColor: 'group-hover:border-yellow-600/30' },
+  { name: 'FastAPI', color: 'from-teal-500 to-teal-600', icon: 'F', borderColor: 'group-hover:border-teal-600/30' },
+  { name: 'Flutter', color: 'from-blue-400 to-blue-500', icon: 'Fl', borderColor: 'group-hover:border-blue-400/30' },
+  { name: 'Firebase', color: 'from-orange-400 to-orange-500', icon: 'Fi', borderColor: 'group-hover:border-orange-400/30' },
+  { name: 'Git', color: 'from-red-600 to-red-700', icon: 'G', borderColor: 'group-hover:border-red-600/30' },
+  { name: 'GitHub', color: 'from-gray-600 to-gray-700', icon: 'GH', borderColor: 'group-hover:border-gray-600/30' },
+  { name: 'Docker', color: 'from-blue-500 to-blue-600', icon: 'D', borderColor: 'group-hover:border-blue-500/30' },
+  { name: 'Postman', color: 'from-orange-500 to-orange-600', icon: 'P', borderColor: 'group-hover:border-orange-500/30' },
 ];
 
 export const Technologies: React.FC = () => {
@@ -92,7 +92,7 @@ export const Technologies: React.FC = () => {
 
               {/* Subtle border glow */}
               <motion.div
-                className={`absolute inset-0 rounded-2xl border-2 border-transparent group-hover:${tech.borderColor} transition-colors duration-300`}
+                className={`absolute inset-0 rounded-2xl border-2 border-transparent ${tech.borderColor} transition-colors duration-300`}
               />
             </motion.div>
           ))}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
@@ -14,13 +14,15 @@ const stats = [
 
 export const Hero: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [particles] = useState(() =>
+  
+  // Generate consistent random positions for particles
+  const particles = useMemo(() => 
     [...Array(20)].map(() => ({
       left: Math.random() * 100,
       top: Math.random() * 100,
       duration: 3 + Math.random() * 2,
       delay: Math.random() * 2,
-    }))
+    })), []
   );
 
   useEffect(() => {
@@ -107,7 +109,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold mb-6 mt-4"
+            className="text-5xl md:text-7xl font-bold mb-6"
           >
             <span className="gradient-text">We Build Modern</span>
             <br />
