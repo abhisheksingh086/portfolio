@@ -60,7 +60,7 @@ export const About: React.FC = () => {
             We combine technical excellence with creative problem-solving to build products that not only meet but exceed expectations. Our team stays at the forefront of technology, ensuring our clients benefit from the latest innovations in software development.
           </p>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Whether you're a startup looking to build your first product or an established business seeking to modernize your digital presence, we have the expertise and passion to deliver results that matter.
+            Whether you&apos;re a startup looking to build your first product or an established business seeking to modernize your digital presence, we have the expertise and passion to deliver results that matter.
           </p>
         </motion.div>
 

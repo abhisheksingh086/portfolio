@@ -49,7 +49,7 @@ ${formData.message}
             <span className="gradient-text">Get In Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Ready to start your project? Contact us today and let's build something amazing together
+            Ready to start your project? Contact us today and let&apos;s build something amazing together
           </p>
         </motion.div>
 
